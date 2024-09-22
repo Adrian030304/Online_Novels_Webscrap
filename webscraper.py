@@ -2,8 +2,11 @@ from bs4 import BeautifulSoup
 import requests
 
 def book(title,author):
-    obj = {}
-    obj[title] = author
+    obj = {
+        "title":"",
+        "author":"",
+    }
+    obj.update(title=title,author=author)
     return obj
 
 
@@ -21,7 +24,6 @@ def scrape():
     for novel_title, novel_author in zip(novel_titles, novel_authors):
         novels.append(book(novel_title,novel_author))
     print(novels)
-    
     
     # novel_titles = []
     # for title in titles:
