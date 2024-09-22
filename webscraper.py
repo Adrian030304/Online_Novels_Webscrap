@@ -6,6 +6,10 @@ from time import sleep
 
 def scrape():
     novels = []
+    for i in range (0,3):
+        x = randint(2,5)
+        print(x)
+        sleep(x)
     page_link = "https://novelbin.com/sort/latest"
     for i in range(1,5):
         pageToScrape = requests.get(page_link + "?page=" + str(i))
