@@ -1,6 +1,8 @@
 from bs4 import BeautifulSoup
 import requests
 import json
+from random import randint 
+from time import sleep  
 
 def scrape():
     novels = []
