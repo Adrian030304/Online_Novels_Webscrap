@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
 import requests
-import psycopg2
+import json
 
 def scrape():
     page_link = "https://novelbin.com/sort/latest"
@@ -21,4 +21,7 @@ def scrape():
     }
         novels.append(book)
     return novels
+
+with open('data.json','w') as f:
+    json.dump(scrape(),f)
 print(scrape())
