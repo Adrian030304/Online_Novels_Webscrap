@@ -23,5 +23,5 @@ def scrape():
     return novels
 
 with open('data.json','w') as f:
-    json.dump(scrape(),f)
+    json.dump(scrape(),f,sort_keys=True)
 print(scrape())
